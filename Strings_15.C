@@ -2,14 +2,14 @@
 
 int contador_vocal(char *);
 int main(void) {
-    char seguir = 1;
+    unsigned int seguir = 1;
     unsigned char mi_string[20];
     while(seguir!=0){
         printf("Ingrese una palabra de longitud 20 como máximo: ");
         scanf("%s", mi_string);
         contador_vocal(mi_string);
         printf("\nPara cerrar el programa presione 0: ");
-        scanf("%d", &seguir);
+        scanf("%u", &seguir);
     }
     return 0;
 }
@@ -34,8 +34,7 @@ int contador_vocal(char * mi_string){
             vocales[4]++;
     }
   }
-    for (int i = 0; i<5; i++){
-        printf("\n En %s hay %d '%c'", mi_string,vocales[i], vocales_letras[i]);   
-  }
+    for (char i = 0; i<5; i++)
+        printf("\n En %s hay %d '%c'", mi_string, vocales[i], vocales_letras[i]);   
   
 }

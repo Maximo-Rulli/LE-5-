@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdio_ext.h>
 
-void buscar_letra(int longitud);
+void buscar_num(int longitud);
 int main(void) {
     unsigned int seguir = 1;
     unsigned int longitud;
@@ -17,7 +17,7 @@ int main(void) {
     return 0;
 }
 
-void buscar_letra(int longitud){
+void buscar_num(int longitud){
     int numeros[longitud];
     int numero_buscar = 0;
     for(unsigned int i = 0; i<longitud; i++){

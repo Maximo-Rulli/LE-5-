@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdio_ext.h>
 
 float resultado ();
 int main ()
@@ -14,9 +15,11 @@ float resultado (){
     for (char i = 0; i < 10; i++){
         printf ("Ingrese el %d° número: ", ++i);
         scanf ("%f", &numeros[--i]);
+        __fpurge(stdin);
         while (numeros[i] == 0){
             printf ("Ingrese el %d° número: ", ++i);
             scanf ("%f", &numeros[--i]);
+            __fpurge(stdin);
         }
         if(numeros[i]<0){
             if(negativos == 0.0)
